@@ -87,12 +87,18 @@ console.log(showText())
 console.log(showArray())
 console.log(showObject())
 
-//return en funciones
+//return en funciones y string literals
+const background='red'
+const color='white'
+const isAutorized=false
+
 const button = document.createElement('button')
 button.innerText='click me'
+button.style=`background:${background}; color:${color}`
+button.style=`background:${isAutorized ? 'blue': 'red'};color${color}`
 document.body.append(button)
 
-const isAutorized=false
+
 
 button.addEventListener('click',()=>{
 
@@ -101,4 +107,9 @@ button.addEventListener('click',()=>{
     }else{
         alert('no esta autorizado')
     }
-})
+}) 
+
+
+
+
+
