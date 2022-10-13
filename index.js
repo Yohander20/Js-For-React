@@ -1,4 +1,34 @@
+//async await
+const ul=document.createElement('ul')
+const li =document.createElement('li')
 
+
+let data=fetch('https://jsonplaceholder.typicode.com/posts')
+.then(function(response){
+    return response.json()
+}).then(function(data){
+    console.log(data)
+    data.foreach(function(){
+        
+    })
+})
+console.log('linea 2')
+
+
+//Ecmascript modules
+
+//import {add,multiply,active,points,title} from './add.js'
+
+import addModule from './add.js'
+console.log(addModule)
+
+/*
+console.log(multiply(10,20))
+console.log(add(10,20))
+console.log(active,points,title)
+*/
+
+/*
 //creando una funcion
 function hello(name){
     return 'Hola' + name
@@ -109,7 +139,49 @@ button.addEventListener('click',()=>{
     }
 }) 
 
+//array methods
 
+const names=['ryan','joe','maria']
+const cerdos=['Jazmin','Rafa','Yohander']
 
+/*for(let i=0; i<names.length;i++){
+    const element=names[i];
+    console.log(element)
+} */
+/*
 
+names.forEach(function(name){
+  console.log(name)
+})
 
+const newNames=cerdos.map(function(names1){
+return names1;
+})
+
+//console.log(newNames)
+//console.log(names.concat(cerdos))
+
+//----------------spread operator
+console.log([...names, ...newNames])
+
+const user2 ={
+    name:"ryan",
+    lastname:"ray"
+}
+
+const address={
+    street: 'main street 123',
+    city:'bogota'
+}
+
+const userInfo={
+    ...user,
+    ...address
+}
+console.log(user2)
+console.log(address)
+console.log(userInfo)
+
+//ecmascript modules
+
+*/
